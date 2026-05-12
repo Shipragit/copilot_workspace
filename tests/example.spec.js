@@ -28,7 +28,7 @@ test('explore docs link', async ({ page }) => {
 test('verify main content', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
-  // Check for main heading
-  const mainHeading = page.getByRole('heading', { name: /Playwright/i });
+  // Check for main h1 heading
+  const mainHeading = page.getByRole('heading', { level: 1 });
   await expect(mainHeading).toBeVisible();
 });
